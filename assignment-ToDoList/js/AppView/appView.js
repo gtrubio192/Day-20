@@ -33,9 +33,9 @@ var AppView = Backbone.View.extend({
 		});
 		// clear text box
 		this.$item.val('');
-		console.log(this.newModel);
+		// console.log(this.newModel);
 		this.list.add(this.newModel);
-		console.log(this.list);
+		// console.log(this.list);
 
 	},
 
@@ -52,12 +52,12 @@ var AppView = Backbone.View.extend({
 
 	onToDoAdded: function(todoModel){
 		console.log("collection increased");
-		console.log(todoModel.attributes);
-		console.log("Model attributes: " + todoModel.attributes);
+		// console.log(todoModel.attributes);
+		// console.log("Model attributes: " + todoModel.attributes);
 		var newItemView = new ListItemView( {model: todoModel } );
-		console.log(newItemView.$el);
-		console.log(this.$todoList);
-		$('#list').append(newItemView.$el);
+		// console.log(newItemView.$el);
+		// console.log(this.$todoList);
+		$('#list').append(newItemView.$todo);
 	}
 
 
